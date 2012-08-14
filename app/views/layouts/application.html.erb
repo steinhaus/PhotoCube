@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Formagram</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<div class="container">
+  <div class="navbar">
+  <div class="navbar-inner">
+    <div class="container">
+      <a class="brand" href="#">
+        Formagram
+      </a>
+      <%if user_signed_in?%>
+      <ul class="nav">
+       <li><a href="#">Modera Fotos</a></li>
+       <li><a href="#">Lista Fotos</a></li>
+    </ul>
+      <%end%>
+    </div>
+  </div>
+</div>
+<%= yield %>
+</div>
+</body>
+</html>

@@ -1,0 +1,5 @@
+<h2>Bem vindo, <%= current_user.name%> <img src="<%= current_user.image%>"></img></h2>
+<%if @nohash%>
+<h3>Você não associou nenhuma hashtag ainda.</h3>
+<%end%>
+
