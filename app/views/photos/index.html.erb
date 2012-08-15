@@ -3,7 +3,7 @@
 <table>
   <tr>
     <th>Url</th>
-    <th>Expires</th>
+    <th>UID</th>
     <th>Active</th>
     <th></th>
     <th></th>
@@ -13,7 +13,7 @@
 <% @photos.each do |photo| %>
   <tr>
     <td><%= photo.url %></td>
-    <td><%= photo.expires %></td>
+    <td><%= photo.uid %></td>
     <td><%= photo.active %></td>
     <td><%= link_to 'Show', photo %></td>
     <td><%= link_to 'Edit', edit_photo_path(photo) %></td>

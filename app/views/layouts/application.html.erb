@@ -18,7 +18,8 @@
       <%if user_signed_in?%>
       <ul class="nav">
        <li><a href="#">Modera Fotos</a></li>
-       <li><a href="#">Lista Fotos</a></li>
+       <li><%= link_to "Lista Fotos", :controller => "home", :action => "list"%></li>
+       <li><%= link_to "Mudar Hashtag", :controller => "users", :action => "edithashtag"%> </li>
     </ul>
       <%end%>
     </div>

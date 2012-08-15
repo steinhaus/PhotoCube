@@ -1,4 +1,7 @@
 class PhotosController < ApplicationController
+  before_filter do
+   authenticate_user! rescue redirect_to auth_url
+  end
   # GET /photos
   # GET /photos.json
   def index

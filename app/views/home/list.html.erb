@@ -1,1 +1,4 @@
-<h1>Reach</h1>
+<h1>List</h1>
+<% @photos.each do |photo| %>
+<img src="<%= photo.url %>"></img>
+<% end %>

@@ -1,3 +1,4 @@
 class Photo < ActiveRecord::Base
-  attr_accessible :active, :expires, :url
+  
+  attr_accessible :active, :uid, :url, :email
 end

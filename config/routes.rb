@@ -2,11 +2,12 @@ Formagram::Application.routes.draw do
   devise_for :users
 
   resources :photos
-
+  resources :users
   get "home/index"
   root :to => "home#index"
   match '/auth/:provider/:callback' => 'authentications#create'
   match '/list' => 'home#list'
+  match '/hashtag'=> 'users#edithashtag'
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

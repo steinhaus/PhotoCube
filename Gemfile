@@ -23,6 +23,7 @@ group :assets do
 end
 
 gem 'jquery-rails'
+gem 'thin'
 
 gem 'devise'
 gem 'omniauth'

@@ -1,6 +1,10 @@
 <h2>Bem vindo, <%= current_user.name%> <img src="<%= current_user.image%>"></img></h2>
 
 <%if @nohash%>
-<h3>Você não associou nenhuma hashtag ainda. Clique aqui para associar.</h3>
+<h3>Você não associou nenhuma hashtag ainda. Clique <%= link_to "aqui", :controller => "users", :action => "edithashtag"%> para associar.</h3>
+
+<% else %>
+
+<h3> Sua hashtag é #<%= current_user.hashtag%> </h3>
 <%end%>
 
