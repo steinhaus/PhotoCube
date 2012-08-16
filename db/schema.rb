@@ -27,6 +27,7 @@ ActiveRecord::Schema.define(:version => 20120814024355) do
     t.string   "uid"
     t.string   "email"
     t.boolean  "active"
+    t.boolean  "deleted"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end

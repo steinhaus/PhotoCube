@@ -1,0 +1,10 @@
+<h1>Moderate</h1>
+<% @photos.each do |photo| %>
+  <img  src="<%= photo.url %>"></img>
+  <% if !photo.active%>
+  <button phid="<%= photo.id %>" class="btn btn-success dropdown-toggle autoriza" data-toggle="dropdown">Autoriza</button>
+  <%else %>
+  <button phid="<%= photo.id %>" class="btn btn-warning dropdown-toggle desautoriza" data-toggle="dropdown">Desautoriza</button>
+  <% end %>
+  <button phid="<%= photo.id %>" class="btn btn-danger dropdown-toggle deleta" data-toggle="dropdown">Deleta</span></button>
+<% end %>

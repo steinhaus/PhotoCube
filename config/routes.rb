@@ -8,6 +8,8 @@ Formagram::Application.routes.draw do
   match '/auth/:provider/:callback' => 'authentications#create'
   match '/list' => 'home#list'
   match '/hashtag'=> 'users#edithashtag'
+  match '/mod' => 'home#moderate', :via => [:get, :post]
+  match '/change' => 'home#change', :via => [:get, :post]
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
