@@ -49,9 +49,11 @@ class HomeController < ApplicationController
   
   def get_things
    email = current_user.email
+   hashtag = current_user.hashtag
+   pwd = md5("xande");
    require 'net/http'
    require 'json'
-   result = Net::HTTP.get(URI.parse('http://sleepy-oasis-7260.herokuapp.com/photos'))
+   result = Net::HTTP.get(URI.parse('http://localhost:9000/'+hashtag+'/photos/'+pwd))
    photos2 = JSON.parse result
  
    photos2.each do |photo2|
@@ -65,6 +67,9 @@ class HomeController < ApplicationController
   @phot2os = Photo.find(:all, :conditions => [ "email = ? AND active = ? AND deleted = ?", email, 't','f'], :order => :updated_at)
  end 
  
+ def md5(valor)
+ Digest::MD5.hexdigest valor
+ end
 
 end
 
